@@ -30,30 +30,43 @@ while True:
     
 
     """Game starts here: """
-    for player in test_playeyrs:
-        print(player)
+
+    if ControlFlow.flag_for_players_list:
+        for player in test_playeyrs:
+            print(player)
+    ControlFlow.flag_for_players_list = False
+
     
     #Psuts the players in the list in order according to their ID numbers.
     ControlFlow.order_players(test_playeyrs)
     
 
     print("outer ID current value: ",ControlFlow.outer_id)
-    
     current_player = ControlFlow.select_next_player(test_playeyrs)
     print("current player: ", current_player)
-    input("test for input")
-    retrieve_answer = ControlFlow.select_subject()
-    answer_to_question = input("Enter answer: ")
-    convertred_input = ControlFlow.convert_input(answer_to_question)
-    ControlFlow.recieve_and_checkanswer(convertred_input, retrieve_answer, current_player)
+    time.sleep(1)
+    current_subject = ControlFlow.select_subject()
+    while True:
+        retrieve_answer = ControlFlow.select_question(current_subject)
+        answer_to_question = input("Enter answer: ")
+        convertred_input = ControlFlow.convert_input(answer_to_question)
+        if ControlFlow.recieve_and_checkanswer(convertred_input, retrieve_answer, current_player):
+            goforward = str(input("Go for an other question? Y/N"))
+            if goforward == "Y":
+                continue
+            else:
+                print("Breaking")
+                time.sleep(1)
+                break
+        else:
+            print("Breaking loop")
+            time.sleep(1)
+            break
+
+        
     
     ControlFlow.count_rounds_til_end += 1
     
     
-    #print(player_counter_simulate)
-    #print(type(retrieve_answer), retrieve_answer)
-    #print(type(convertred_input), convertred_input)
-
-
-
+   
 

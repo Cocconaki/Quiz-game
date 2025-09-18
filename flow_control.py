@@ -17,6 +17,10 @@ class ControlFlow:
     If it does, the round ends. Logic has flaws, I need to check on this later."""
     count_rounds_til_end = 0
 
+    """Remains true only before the first round of the game starts, if ture the script lists all the players.
+    This only happens once, at the start of the game."""
+    flag_for_players_list = True
+
     @staticmethod
     def select_subject():
         
@@ -24,27 +28,29 @@ class ControlFlow:
         
         for subject in subjects:
             if random_number_subject == subjects.index(subject):
-                
-            
                 print("Spinning...")
                 time.sleep(3)
                 
                 print("Category: ", subject.category)
-                time.sleep(1)
+                return subject
                 
-                question = random.choice(list(subject.questions.items()))
-                print(question[0])
-                return question[1]
-                #input the user for an answer, and if it's the same as the second element in the list, he's correct.Otherwise, he isn't
-        
+    @staticmethod
+    def select_question(subject):
+        time.sleep(1)
+        question = random.choice(list(subject.questions.items()))
+        print(question[0])
+        return question[1]
+    
     @staticmethod
     def recieve_and_checkanswer(players_answer, correct_answer,current_player):
         
         if players_answer == correct_answer:
             print("Correct!")
             current_player.points += 1
+            return True
         else:
             print("Incorrect!")
+            return False
 
    
 

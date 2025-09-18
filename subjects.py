@@ -10,6 +10,9 @@ class Subject:
             self.questions = {}
         else:
             self.questions = questions
+    
+    def __repr__(self):
+        return f"Subject name: {self.category}"
 
 
 subject1 = Subject("History", {"When did ww1 start?":1914,"When asdasd":1914,"When did ww1 s":1914,"When ":1914})
