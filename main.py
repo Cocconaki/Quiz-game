@@ -2,30 +2,34 @@ from player import Player
 from flow_control import ControlFlow
 from subjects import *
 import time
-
-def convert_input(userinput):
-    if userinput.isdigit():
-        return int(userinput)
-    else:
-        return userinput
- 
+import os
 
 
-rounds = 0
-player_counter_simulate = 0
 
 test_playeyrs = ControlFlow.create_players()
 
 limit_end_round = len(test_playeyrs)
-count_rounds_til_end = 0
 
 while True:
-
-    if count_rounds_til_end == limit_end_round:
+    
+    if ControlFlow.count_rounds_til_end == limit_end_round:
+        ControlFlow.count_rounds_til_end = 0
+        ControlFlow.outer_id = None
+        ControlFlow.round_counter += 1
+        
+        if ControlFlow.round_counter == 3:
+            print("Game is DONE!")
+            time.sleep(1)
+            os.system("cls")
+            ControlFlow.finish_game(test_playeyrs)
+            break
+        
         print("Round ends here")
         time.sleep(2)
-        ControlFlow.end_round(test_playeyrs)
+        ControlFlow.end_round(test_playeyrs, ControlFlow.end_round)
     
+
+    """Game starts here: """
     for player in test_playeyrs:
         print(player)
     
@@ -35,20 +39,15 @@ while True:
 
     print("outer ID current value: ",ControlFlow.outer_id)
     
-    print("current player: ", ControlFlow.select_next_player(test_playeyrs))
-    
-    
-    
+    current_player = ControlFlow.select_next_player(test_playeyrs)
+    print("current player: ", current_player)
     input("test for input")
-      
     retrieve_answer = ControlFlow.select_subject()
-    
     answer_to_question = input("Enter answer: ")
+    convertred_input = ControlFlow.convert_input(answer_to_question)
+    ControlFlow.recieve_and_checkanswer(convertred_input, retrieve_answer, current_player)
     
-    convertred_input = convert_input(answer_to_question)
-    
-    ControlFlow.recieve_and_checkanswer(convertred_input, retrieve_answer)
-    count_rounds_til_end += 1
+    ControlFlow.count_rounds_til_end += 1
     
     
     #print(player_counter_simulate)
