@@ -21,6 +21,9 @@ class ControlFlow:
     This only happens once, at the start of the game."""
     flag_for_players_list = True
 
+    """Counts the number of points a player collected in a round. If he fails a question, the points reduce by 50%"""
+    points_in_round = 0
+
     @staticmethod
     def select_subject():
         
@@ -46,10 +49,11 @@ class ControlFlow:
         
         if players_answer == correct_answer:
             print("Correct!")
-            current_player.points += 1
+            #current_player.points += 1000
             return True
         else:
             print("Incorrect!")
+            time.sleep(1)
             return False
 
    

@@ -51,14 +51,20 @@ while True:
         answer_to_question = input("Enter answer: ")
         convertred_input = ControlFlow.convert_input(answer_to_question)
         if ControlFlow.recieve_and_checkanswer(convertred_input, retrieve_answer, current_player):
+            ControlFlow.points_in_round += 1000
             goforward = str(input("Go for an other question? Y/N"))
             if goforward == "Y":
                 continue
             else:
+                current_player.points += ControlFlow.points_in_round
+                ControlFlow.points_in_round = 0
                 print("Breaking")
                 time.sleep(1)
                 break
         else:
+            ControlFlow.points_in_round = ControlFlow.points_in_round / 2
+            current_player.points += ControlFlow.points_in_round
+            ControlFlow.points_in_round = 0
             print("Breaking loop")
             time.sleep(1)
             break
