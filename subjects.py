@@ -1,4 +1,7 @@
+import json
 
+with open("testing.json", "r") as f:
+    data = json.load(f)
 
 class Subject:
 
@@ -15,11 +18,12 @@ class Subject:
         return f"Subject name: {self.category}"
 
 
-subject1 = Subject("History", {"When did ww1 start?":1914,"When asdasd":1914,"When did ww1 s":1914,"When ":1914})
-subject2 = Subject("Phisics",{"What letter is the symbol of gravity?":"g","When dfff":1914,"Whewewe":1914,"When art?":1914})
-subject3 = Subject("Movies", {"Who is the protagonLotr?":"Frodggins","art?":1914,"?":1914,})
-subject4 = Subject("Programming", {"What language is considered to be the descendant of Java?":"Kotlin"})
+subject1 = Subject("History", None)
+subject2 = Subject("Phisics", None)
+subject3 = Subject("Movies", None)
+subject4 = Subject("Programming", None)
 
 
 subjects = [subject1, subject2, subject3, subject4]
- 
+for subject in subjects:
+    subject.questions = data[subject.category]

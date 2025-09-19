@@ -1,0 +1,35 @@
+{
+    "Phisics": 
+        {
+    "What is the letter for unit of work?":"w",
+    "What liquid metal was used in thermo meters?":"mercury",
+    "What is the hardest material on the planet?":"Diamond"
+    
+        },
+
+    "History": 
+        {
+    "When did ww1 start?":1914,
+    "When did ww2 start?":1939,
+    "When did ww1 end?":1918
+        },
+
+    "Movies":
+        {
+    "How many LOTR movies were made?":3,
+    "Which one was the best walking dead season?":1,
+    "Best CGI movie of all time?":"Avatar"
+        },
+    
+    "Programming": 
+    {
+    "What language is the descendant of Java?":"Kotlin",
+    "Which one is text-based? int or str?":"str",
+    "How many bits make up a byte?":8
+    }
+    
+}
+
+
+
+

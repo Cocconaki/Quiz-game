@@ -93,7 +93,7 @@ class ControlFlow:
         while x < 4:
             if x >= 1:
                 quit_process = str(input("Want to add an other player? Y/N: "))
-                if quit_process == "N":
+                if quit_process.lower() == "n":
                     break
                 else:
                     pass

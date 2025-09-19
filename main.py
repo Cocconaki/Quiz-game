@@ -53,7 +53,7 @@ while True:
         if ControlFlow.recieve_and_checkanswer(convertred_input, retrieve_answer, current_player):
             ControlFlow.points_in_round += 1000
             goforward = str(input("Go for an other question? Y/N"))
-            if goforward == "Y":
+            if goforward.lower() == "y":
                 continue
             else:
                 current_player.points += ControlFlow.points_in_round
@@ -69,8 +69,6 @@ while True:
             time.sleep(1)
             break
 
-        
-    
     ControlFlow.count_rounds_til_end += 1
     
     
