@@ -1,6 +1,6 @@
 import json
 
-with open("testing.json", "r") as f:
+with open(r"C:\Users\admin\Desktop\Coding\quiz game project\testing.json", "r") as f:
     data = json.load(f)
 
 class Subject:
