@@ -3,7 +3,27 @@
         {
     "What is the letter for unit of work?":"w",
     "What liquid metal was used in thermo meters?":"mercury",
-    "What is the hardest material on the planet?":"Diamond"
+    "What is the hardest material on the planet?":"Diamond",
+    "What is the force that pulls objects toward Earth?": "Gravity",
+    "What is the SI unit of force?": "Newton",
+    "What is the speed of light in vacuum?": "299792458 m/s",
+    "What is the unit of electric current?": "Ampere",
+    "What is the device used to measure temperature?": "Thermometer",
+    "What is the SI unit of energy?": "Joule",
+    "What is the main source of energy for Earth?": "Sun",
+    "What is the SI unit of power?": "Watt",
+    "What is the unit of electric resistance?": "Ohm",
+    "What is the simple machine that uses a wheel and rope?": "Pulley",
+    "What is the SI unit of frequency?": "Hertz",
+    "What type of energy is stored in a stretched spring?": "Potential Energy",
+    "What kind of lens is used in a magnifying glass?": "Convex Lens",
+    "What is the force that slows down moving objects?": "Friction",
+    "What is the SI unit of pressure?": "Pascal",
+    "What is the process of heat transfer through direct contact?": "Conduction",
+    "What is the unit of work in physics?": "Joule",
+    "What is the force that makes planets orbit the Sun?": "Gravity",
+    "What is the SI unit of electric charge?": "Coulomb",
+    "What type of mirror is used in car side mirrors?": "Convex Mirror"
     
         },
 
@@ -11,21 +31,88 @@
         {
     "When did ww1 start?":1914,
     "When did ww2 start?":1939,
-    "When did ww1 end?":1918
+    "When did ww1 end?":1918,
+    "Who was the first President of the United States?": "George Washington",
+    "In which year did World War II end?": "1945",
+    "Which empire was ruled by Julius Caesar?": "Roman Empire",
+    "Who discovered America in 1492?": "Christopher Columbus",
+    "Which wall divided East and West Germany?": "Berlin Wall",
+    "Who was known as the Maid of Orleans?": "Joan of Arc",
+    "Which ancient civilization built the pyramids?": "Egyptians",
+    "Who was the British Prime Minister during World War II?": "Winston Churchill",
+    "In which year did India gain independence?": "1947",
+    "Who was the first man to walk on the Moon?": "Neil Armstrong",
+    "Which war was fought between the North and South regions in the United States?": "Civil War",
+    "Who was the famous civil rights leader in the USA during the 1960s?": "Martin Luther King Jr.",
+    "Which country was led by Napoleon Bonaparte?": "France",
+    "Which ancient civilization invented writing?": "Sumerians",
+    "Who was the first emperor of China?": "Qin Shi Huang",
+    "Which ship sank in 1912 on its maiden voyage?": "Titanic",
+    "Who wrote the Declaration of Independence?": "Thomas Jefferson",
+    "Which event started in 1789 in France?": "French Revolution",
+    "Who was the leader of the Soviet Union during World War II?": "Joseph Stalin",
+    "Which empire was known for its warriors called Samurai?": "Japanese Empire"
+        
+
+    
         },
 
     "Movies":
         {
     "How many LOTR movies were made?":3,
     "Which one was the best walking dead season?":1,
-    "Best CGI movie of all time?":"Avatar"
+    "Best CGI movie of all time?":"Avatar",
+    "Who directed the movie 'Jurassic Park'?": "Steven Spielberg",
+    "Which movie features the character 'Jack Sparrow'?": "Pirates of the Caribbean",
+    "Who played Iron Man in the Marvel movies?": "Robert Downey Jr.",
+    "Which animated movie features a fish named Nemo?": "Finding Nemo",
+    "Who directed 'Titanic'?": "James Cameron",
+    "Which movie is famous for the quote 'May the Force be with you'?": "Star Wars",
+    "Who played the character Harry Potter in the movies?": "Daniel Radcliffe",
+    "Which movie features a talking donkey and an ogre?": "Shrek",
+    "Who directed 'Inception'?": "Christopher Nolan",
+    "Which movie series features characters like Frodo and Gandalf?": "The Lord of the Rings",
+    "Which movie is about a lion named Simba?": "The Lion King",
+    "Who played Jack Dawson in 'Titanic'?": "Leonardo DiCaprio",
+    "Which movie features superheroes called the Avengers?": "The Avengers",
+    "Which animated movie features the characters Woody and Buzz Lightyear?": "Toy Story",
+    "Who directed 'E.T. the Extra-Terrestrial'?": "Steven Spielberg",
+    "Which movie features a magical school called Hogwarts?": "Harry Potter",
+    "Who played Katniss Everdeen in 'The Hunger Games'?": "Jennifer Lawrence",
+    "Which movie features a car named Lightning McQueen?": "Cars",
+    "Which film is known for the line 'I'll be back'?": "The Terminator",
+    "Who played the character Joker in 'The Dark Knight'?": "Heath Ledger"
+
+
         },
     
     "Programming": 
     {
     "What language is the descendant of Java?":"Kotlin",
     "Which one is text-based? int or str?":"str",
-    "How many bits make up a byte?":8
+    "How many bits make up a byte?":8,
+    "What does 'CPU' stand for?": "Central Processing Unit",
+    "What does 'RAM' stand for?": "Random Access Memory",
+    "What does 'HTML' stand for?": "HyperText Markup Language",
+    "What does 'URL' stand for?": "Uniform Resource Locator",
+    "Which device is used to input data into a computer?": "Keyboard",
+    "Which device displays output from a computer?": "Monitor",
+    "What is the main language used to style web pages?": "CSS",
+    "Which programming language uses indentation to define blocks?": "Python",
+    "What is the brain of the computer called?": "CPU",
+    "What does 'GUI' stand for?": "Graphical User Interface",
+    "Which device stores data permanently in a computer?": "Hard Drive",
+    "What does 'USB' stand for?": "Universal Serial Bus",
+    "What is the temporary memory of a computer called?": "RAM",
+    "Which programming language is used to make web pages interactive?": "JavaScript",
+    "What does 'OS' stand for?": "Operating System",
+    "Which part of the computer executes instructions?": "CPU",
+    "Which network connects computers in a small area like a building?": "LAN",
+    "What does 'IP' stand for in IP Address?": "Internet Protocol",
+    "Which device is used to point and click on a computer?": "Mouse",
+    "Which programming language is known as the foundation of web development?": "HTML"
+
+
     }
     
 }
