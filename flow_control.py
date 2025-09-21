@@ -24,6 +24,9 @@ class ControlFlow:
     """Counts the number of points a player collected in a round. If he fails a question, the points reduce by 50%"""
     points_in_round = 0
 
+    """It takes questions that were already used in game, so they dont appear again"""
+    questions_asked = []
+
     @staticmethod
     def select_subject():
         
@@ -39,10 +42,15 @@ class ControlFlow:
                 
     @staticmethod
     def select_question(subject):
-        time.sleep(1)
-        question = random.choice(list(subject.questions.items()))
-        print(question[0])
-        return question[1]
+
+        while True:
+            time.sleep(1)
+            question = random.choice(list(subject.questions.items())) 
+            if question[0] in ControlFlow.questions_asked:
+                continue
+            ControlFlow.questions_asked.append(question[0])
+            print(question[0])
+            return question[1]
     
     @staticmethod
     def recieve_and_checkanswer(players_answer, correct_answer,current_player):
