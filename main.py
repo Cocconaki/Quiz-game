@@ -48,7 +48,12 @@ while True:
     current_subject = ControlFlow.select_subject()
     while True:
         retrieve_answer = ControlFlow.select_question(current_subject)
-        answer_to_question = input("Enter answer: ")
+        try:
+            answer_to_question = input("Enter answer: ")
+        except EOFError:
+            print("Try again")
+            time.sleep(1)
+            continue
         convertred_input = ControlFlow.convert_input(answer_to_question)
         if ControlFlow.recieve_and_checkanswer(convertred_input, retrieve_answer, current_player):
             ControlFlow.points_in_round += 1000
