@@ -61,6 +61,7 @@ class ControlFlow:
             return True
         else:
             print("Incorrect!")
+            print("Correct answer: ",correct_answer)
             time.sleep(1)
             return False
 
@@ -100,12 +101,20 @@ class ControlFlow:
         next_id = 0
         while x < 4:
             if x >= 1:
-                quit_process = str(input("Want to add an other player? Y/N: "))
+                try:
+                    quit_process = str(input("Want to add an other player? Y/N: "))
+                except EOFError:
+                    print("Try again")
+                    continue
                 if quit_process.lower() == "n":
                     break
                 else:
                     pass
-            user_input_name = str(input("Enter username: "))
+            try:
+                user_input_name = str(input("Enter username: "))
+            except EOFError:
+                print("Try again")
+                continue
             if len(user_input_name) > 10:
                 print("Username can't exceed 10 charachters.")
                 time.sleep(1)
@@ -116,6 +125,11 @@ class ControlFlow:
                 time.sleep(1)
                 print("Current iteration: ", x)
                 continue
+            elif len(user_input_name) < 1:
+                print("Your name must be at least one charachter long.")
+                time.sleep(1)
+                continue
+
             names_taken.append(user_input_name)
             x += 1
 
@@ -140,7 +154,7 @@ class ControlFlow:
 
         pass
         """Function should chose the winner player, and order the rest of them according to their points.
-        If its a draw, it's a draw..for so far
+        If its a draw, it's a draw..for so far 
         maybe the two players should be able to deciede on whether or not compete for some more time
         This happens when players hit the last round, which should be 3 so far, so testing can be easier.
         """
